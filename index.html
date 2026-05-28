@@ -9,103 +9,92 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     body { font-family: 'Inter', system-ui, sans-serif; }
-    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
-    .section-header::after {
-      content: '';
-      position: absolute;
-      width: 64px;
-      height: 3px;
-      background: #3b82f6;
-      bottom: -6px;
-      left: 0;
-    }
-    details summary { cursor: pointer; }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-200">
+<body class="bg-slate-950 text-slate-200 min-h-screen">
 
   <!-- HERO -->
-  <header class="hero-bg py-24 text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="inline-flex items-center gap-3 bg-white/10 text-white text-sm font-medium px-6 py-2 rounded-3xl mb-6">
+  <header class="bg-gradient-to-br from-slate-900 to-black py-20 text-center">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md text-white text-sm font-medium px-6 py-2.5 rounded-3xl mb-8">
         <i class="fas fa-book-open"></i>
         Springer Nature • May 27, 2026
       </div>
-      <h1 class="text-6xl md:text-7xl font-bold tracking-tight mb-4">
+      
+      <h1 class="text-6xl md:text-7xl font-bold tracking-tighter mb-4">
         Benchmark Functions<br>in Continuous Optimization
       </h1>
-      <p class="text-3xl text-slate-400 mb-8">Volume I — Single-Objective Problems</p>
-      
-      <div class="flex flex-wrap justify-center gap-x-12 gap-y-4 text-lg mb-12">
+      <p class="text-3xl text-slate-400 mb-10">Volume I — Single-Objective Problems</p>
+
+      <div class="flex justify-center gap-12 text-lg mb-12">
         <div>
           <span class="font-semibold">Kusum Deep</span><br>
-          <span class="text-slate-400 text-base">Roorkee, India</span>
+          <span class="text-slate-400">Roorkee, India</span>
         </div>
         <div>
           <span class="font-semibold">Kanchan Rajwar</span><br>
-          <span class="text-slate-400 text-base">Pretoria, South Africa</span>
+          <span class="text-slate-400">Pretoria, South Africa</span>
         </div>
       </div>
 
       <a href="https://github.com/kanchan999/benchmark-functions-book" target="_blank"
-         class="inline-flex items-center gap-3 bg-white text-slate-900 font-semibold px-8 py-4 rounded-2xl hover:scale-105 transition text-lg">
+         class="inline-flex items-center gap-3 bg-white text-slate-900 hover:bg-amber-300 font-semibold px-8 py-4 rounded-3xl text-lg transition">
         <i class="fab fa-github text-2xl"></i>
-        <span>Companion GitHub Repository</span>
+        Companion GitHub Repository
       </a>
     </div>
   </header>
 
   <main class="max-w-5xl mx-auto px-6 py-16">
 
-    <section class="mb-20 text-center">
-      <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+    <section class="mb-16 text-center">
+      <p class="text-xl text-slate-300 max-w-3xl mx-auto">
         A complete laboratory manual for rigorous evaluation of metaheuristics, evolutionary algorithms, and swarm intelligence methods.
       </p>
     </section>
 
     <!-- WHAT'S INSIDE -->
     <section class="mb-20">
-      <h2 class="section-header text-4xl font-semibold mb-10">What’s Inside</h2>
+      <h2 class="text-4xl font-semibold mb-8 text-center">What’s Inside</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-slate-900 rounded-3xl p-8">
+        <div class="bg-slate-900/70 border border-slate-700 rounded-3xl p-8 hover:border-blue-500 transition">
           <div class="text-blue-400 text-5xl mb-4">01</div>
           <h3 class="text-2xl font-semibold mb-3">Foundations</h3>
-          <p class="text-slate-400">No Free Lunch Theorem, fitness landscape analysis, modality, separability, and feature-based views.</p>
+          <p class="text-slate-400">No Free Lunch Theorem, fitness landscape analysis, and feature-based views of mathematical landscapes.</p>
         </div>
-        <div class="bg-slate-900 rounded-3xl p-8">
+        <div class="bg-slate-900/70 border border-slate-700 rounded-3xl p-8 hover:border-blue-500 transition">
           <div class="text-blue-400 text-5xl mb-4">02</div>
           <h3 class="text-2xl font-semibold mb-3">Full Catalog</h3>
-          <p class="text-slate-400">Hundreds of unimodal, multimodal, and pathological benchmark functions with equations, domains, and fingerprints.</p>
+          <p class="text-slate-400">Hundreds of unimodal, multimodal, and pathological benchmark functions with equations, domains, global optima, and fingerprints.</p>
         </div>
-        <div class="bg-slate-900 rounded-3xl p-8">
+        <div class="bg-slate-900/70 border border-slate-700 rounded-3xl p-8 hover:border-blue-500 transition">
           <div class="text-blue-400 text-5xl mb-4">03</div>
           <h3 class="text-2xl font-semibold mb-3">Practical Toolkit</h3>
-          <p class="text-slate-400">Vectorized NumPy code • Interactive Plotly dashboards • Statistical testing guide • Experimental protocol.</p>
+          <p class="text-slate-400">Vectorized NumPy • Interactive Plotly dashboards • Statistical testing guide • Complete experimental protocol.</p>
         </div>
       </div>
     </section>
 
-    <!-- COMPANION RESOURCES -->
-    <section class="bg-slate-900 rounded-3xl p-12 text-center mb-20">
-      <h2 class="text-4xl font-semibold mb-6">Companion Resources</h2>
-      <a href="https://github.com/kanchan999/benchmark-functions-book" target="_blank"
-         class="inline-flex items-center gap-4 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xl px-10 py-5 rounded-3xl transition">
-        <i class="fab fa-github text-3xl"></i>
-        github.com/kanchan999/benchmark-functions-book
-      </a>
-    </section>
-
     <!-- CITATION -->
-    <section class="bg-slate-900 rounded-3xl p-10">
+    <section class="bg-slate-900 rounded-3xl p-10 mb-12">
       <h2 class="text-3xl font-semibold mb-6">How to Cite</h2>
-      <pre class="bg-slate-950 p-8 rounded-2xl text-sm overflow-x-auto text-emerald-300 font-mono">Deep, K., &amp; Rajwar, K. (2026). 
+      <pre class="bg-black p-8 rounded-2xl text-emerald-300 font-mono text-sm overflow-x-auto">Deep, K., &amp; Rajwar, K. (2026). 
 Benchmark Functions in Continuous Optimization: 
 Volume I — Single-Objective Problems. Springer Nature.</pre>
     </section>
+
   </main>
 
-  <footer class="bg-black py-12 text-center text-slate-500 text-sm">
+  <footer class="bg-black py-12 text-center text-slate-500 text-sm border-t border-slate-800">
     © 2026 Kusum Deep &amp; Kanchan Rajwar • Springer Nature
   </footer>
+
+  <script>
+    // Initialize Tailwind
+    tailwind.config = {
+      content: ["./**/*.{html,js}"],
+      theme: { extend: {} }
+    }
+  </script>
 </body>
 </html>
