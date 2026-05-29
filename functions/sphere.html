@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sphere Function — Benchmark Functions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+
+  <header class="hero-bg py-12 text-center">
+    <div class="max-w-5xl mx-auto px-6">
+      <a href="../index.html" class="inline-flex items-center gap-2 text-slate-400 hover:text-white mb-8">
+        ← Back to Catalog
+      </a>
+      <h1 class="text-5xl font-bold">Sphere Function</h1>
+      <p class="text-xl text-slate-400 mt-2">§5.3.1 • Scalable Unimodal</p>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- Equation -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Mathematical Definition</h2>
+      <div class="bg-slate-900 rounded-3xl p-10 text-center text-4xl font-light text-emerald-300">
+        f(x) = Σ xᵢ²    for i = 1 to n
+      </div>
+      <p class="text-center text-slate-400 mt-4">Domain: [-100, 100]ⁿ</p>
+    </section>
+
+    <!-- Plots -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-6">Visualizations</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p class="text-slate-400 mb-3">2D Contour Plot</p>
+          <div class="bg-slate-900 aspect-video rounded-3xl flex items-center justify-center border border-slate-700">
+            <!-- You can replace with actual Plotly later -->
+            <span class="text-slate-500">2D Contour Plot (interactive version in GitHub repo)</span>
+          </div>
+        </div>
+        <div>
+          <p class="text-slate-400 mb-3">3D Surface Plot</p>
+          <div class="bg-slate-900 aspect-video rounded-3xl flex items-center justify-center border border-slate-700">
+            <span class="text-slate-500">3D Surface Plot (interactive version in GitHub repo)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Properties -->
+    <section class="mb-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-slate-900 rounded-3xl p-8">
+        <h3 class="font-semibold text-xl mb-6">Key Characteristics</h3>
+        <ul class="space-y-4">
+          <li><strong>Dimension:</strong> n (scalable)</li>
+          <li><strong>Domain:</strong> [-100, 100]ⁿ</li>
+          <li><strong>Global Minimum:</strong> f(x*) = 0 at x* = (0, ..., 0)</li>
+          <li><strong>Modality:</strong> Unimodal</li>
+          <li><strong>Separability:</strong> Separable</li>
+          <li><strong>Smoothness:</strong> C∞ (infinitely differentiable)</li>
+          <li><strong>Conditioning:</strong> κ = 1 (isotropic)</li>
+        </ul>
+      </div>
+
+      <div class="bg-slate-900 rounded-3xl p-8">
+        <h3 class="font-semibold text-xl mb-6">Python &amp; MATLAB Code</h3>
+        <pre class="bg-slate-950 p-6 rounded-2xl text-sm overflow-auto text-emerald-300">def sphere(x):
+    return sum(xi**2 for xi in x)</pre>
+        <p class="text-xs text-slate-400 mt-4">MATLAB: `f = sum(x.^2);`</p>
+      </div>
+    </section>
+
+    <div class="text-center text-slate-400 text-sm">
+      Full interactive Plotly dashboards and vectorized implementations available in the 
+      <a href="https://github.com/kanchan999/benchmark-functions-book" class="text-blue-400 hover:underline">Companion GitHub Repository</a>.
+    </div>
+  </main>
+
+  <footer class="bg-black py-12 text-center text-slate-500 text-sm">
+    © 2026 Kusum Deep &amp; Kanchan Rajwar • Springer Nature
+  </footer>
+</body>
+</html>
