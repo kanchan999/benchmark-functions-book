@@ -51,17 +51,12 @@
       </div>
     </section>
 
-    <!-- Optimization GIF / Animation -->
+    <!-- Optimization GIF -->
     <section class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">Optimization Behavior</h2>
-      <div class="bg-slate-900 rounded-3xl p-8">
-        <p class="text-slate-400 mb-4">Watch a simple gradient descent converge to the global minimum:</p>
-        <div class="flex justify-center">
-          <!-- Replace this src with your actual GIF file later -->
-          <img id="optimizationGif" src="https://via.placeholder.com/800x400/1e2937/60a5fa?text=Sphere+Convergence+GIF+(add+your+own)" 
-               alt="Sphere Optimization GIF" class="rounded-2xl shadow-xl max-w-full">
-        </div>
-        <p class="text-xs text-center text-slate-500 mt-4">GIF shows rapid convergence because Sphere is smooth and unimodal</p>
+      <h2 class="text-2xl font-semibold mb-4">Optimization Trajectory</h2>
+      <div class="bg-slate-900 rounded-3xl p-8 text-center">
+        <p class="text-slate-400 mb-6">Watch gradient descent particles converge rapidly to the global minimum</p>
+        <img src="sphere_optimization.gif" alt="Sphere Optimization GIF" class="rounded-3xl shadow-2xl mx-auto max-w-full">
       </div>
     </section>
 
@@ -74,7 +69,7 @@
           <li><strong>Modality:</strong> Unimodal</li>
           <li><strong>Separability:</strong> Fully separable</li>
           <li><strong>Smoothness:</strong> C<sup>∞</sup></li>
-          <li><strong>Conditioning:</strong> κ = 1 (isotropic)</li>
+          <li><strong>Conditioning:</strong> κ = 1 (perfectly isotropic)</li>
         </ul>
       </div>
       <div class="bg-slate-900 rounded-3xl p-8">
@@ -92,9 +87,22 @@
   </footer>
 
   <script>
-    // (Same Plotly code as before - 2D contour + 3D surface)
-    function createContourPlot() { /* ... same as previous ... */ }
-    function createSurfacePlot() { /* ... same as previous ... */ }
+    function createContourPlot() {
+      const x = Array.from({length: 50}, (_, i) => -5 + i * 0.2);
+      const y = x;
+      const z = x.map(xi => y.map(yj => xi*xi + yj*yj));
+      Plotly.newPlot('contourPlot', [{
+        x: x, y: y, z: z, type: 'contour', colorscale: 'Viridis'
+      }], {title: '2D Contour', paper_bgcolor: '#0f172a', plot_bgcolor: '#0f172a', font: {color: '#e2e8f0'}});
+    }
+    function createSurfacePlot() {
+      const x = Array.from({length: 40}, (_, i) => -5 + i * 0.25);
+      const y = x;
+      const z = x.map(xi => y.map(yj => xi*xi + yj*yj));
+      Plotly.newPlot('surfacePlot', [{
+        x: x, y: y, z: z, type: 'surface', colorscale: 'Viridis'
+      }], {title: '3D Surface', paper_bgcolor: '#0f172a', plot_bgcolor: '#0f172a', font: {color: '#e2e8f0'}});
+    }
     window.onload = function() {
       createContourPlot();
       createSurfacePlot();
