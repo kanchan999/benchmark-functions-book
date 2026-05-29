@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[FUNCTION NAME] — Benchmark Functions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+
+  <header class="hero-bg py-12 text-center">
+    <div class="max-w-5xl mx-auto px-6">
+      <a href="../index.html" class="inline-flex items-center gap-2 text-slate-400 hover:text-white mb-8">
+        ← Back to Catalog
+      </a>
+      <h1 class="text-5xl font-bold">[FUNCTION NAME]</h1>
+      <p class="text-xl text-slate-400 mt-2">[SECTION] • [CHAPTER]</p>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <!-- Equation -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Mathematical Definition</h2>
+      <div class="bg-slate-900 rounded-3xl p-8 text-center">
+        <p class="text-3xl font-light text-emerald-300">[EQUATION HERE]</p>
+      </div>
+    </section>
+
+    <!-- Plots -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Visualizations</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-slate-900 rounded-3xl p-6">
+          <p class="text-sm text-slate-400 mb-3">2D Contour Plot</p>
+          <div class="bg-slate-950 aspect-video rounded-2xl flex items-center justify-center">
+            <!-- Plotly or image will go here -->
+            <span class="text-slate-500">Contour Plot (coming soon)</span>
+          </div>
+        </div>
+        <div class="bg-slate-900 rounded-3xl p-6">
+          <p class="text-sm text-slate-400 mb-3">3D Surface Plot</p>
+          <div class="bg-slate-950 aspect-video rounded-2xl flex items-center justify-center">
+            <span class="text-slate-500">3D Surface (coming soon)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Details -->
+    <section class="mb-12 grid md:grid-cols-2 gap-8">
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">Key Characteristics</h2>
+        <ul class="space-y-3 text-slate-300">
+          <li><strong>Dimension:</strong> n</li>
+          <li><strong>Domain:</strong> [−100,100]<sup>n</sup></li>
+          <li><strong>Global Minimum:</strong> f(x*) = 0 at x* = 0</li>
+          <li><strong>Modality:</strong> Unimodal</li>
+          <li><strong>Separability:</strong> Separable</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">Code</h2>
+        <pre class="bg-slate-900 p-6 rounded-3xl text-sm overflow-auto">def sphere(x):
+    return sum(xi**2 for xi in x)</pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-black py-12 text-center text-slate-500 text-sm">
+    © 2026 Kusum Deep &amp; Kanchan Rajwar • Springer Nature
+  </footer>
+</body>
+</html>
